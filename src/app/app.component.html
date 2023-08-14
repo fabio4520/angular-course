@@ -1,17 +1,20 @@
 <div class="container mt-5">
   <div class="form-area">
-    <form>
+    <form #f='ngForm' (submit)="onSubmit(f)">
       <div class="form-group">
         <label for="">First Name</label>
-        <input type="text" placeholder="First name" class="form-control">
+        <input type="text" placeholder="First name" class="form-control"
+          [ngClass]="{'is-invalid': firstName.invalid && firstName.touched}" name="firstName" ngModel
+          #firstName="ngModel" (change)="getValue(firstName)" required>
+        <div class="alert alert-danger" *ngIf="firstName.invalid && firstName.touched">First name is required ...</div>
       </div>
       <div class="form-group">
         <label for="">Email</label>
-        <input type="email" name="" id="" placeholder="email" class="form-control">
+        <input type="email" name="email" placeholder="email" class="form-control" ngModel>
       </div>
       <div class="form-group">
         <label for="">Address</label>
-        <textarea name="" id="" cols="30" rows="10" placeholder="address" class="form-control"></textarea>
+        <textarea name="address" cols="30" rows="10" placeholder="address" class="form-control" ngModel></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>

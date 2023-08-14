@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { PostComponent } from './post/post.component';
+import { FormControl, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -22,4 +23,14 @@ export class AppComponent {
   dummyText: string = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet blanditiis dicta perferendis beatae, eveniet sequi consectetur commodi suscipit eligendi hic minus odit facilis molestiae in sapiente consequuntur aspernatur, ipsam dolor!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet blanditiis dicta perferendis beatae, eveniet sequi  consectetur commodi suscipit eligendi hic minus odit facilis molestiae in sapiente consequuntur aspernatur, ipsam dolor!"
 
   constructor() { }
+
+  ngOnInit(): void { }
+
+  onSubmit(f: NgForm) {
+    console.log(f);
+  }
+
+  getValue(f: any) {
+    console.log(f);
+  }
 }
