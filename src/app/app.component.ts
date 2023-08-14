@@ -13,6 +13,11 @@ export class AppComponent {
   price: number = 99.99;
   today: Date = new Date();
   simpleArray = ['a', 'b', 'c', 'd', 'e'];
+  cityDetails: any = {
+    name: 'Madrid',
+    population: 3223334,
+    country: 'Spain'
+  }
 
   constructor() { }
 }
