@@ -10,6 +10,7 @@ export class AppComponent {
   title: string = 'Angular Course';
   count: number = 28598746;
   dcValue: number = 36.654789;
+  price: number = 99.99;
 
   constructor() { }
 }
