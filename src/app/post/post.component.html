@@ -1,8 +1,12 @@
-<h1>{{title}}</h1>
+<!-- <h1>{{title}}</h1>
 
 
 <p>{{fromParent}}</p>
 
 <app-post-list [fromPostParent]="messageFromPost"></app-post-list>
 
-<button (click)="sendMessage()">Click</button>
+<button (click)="sendMessage()">Click</button> -->
+
+<ul>
+  <li *ngFor="let post of postList">{{post.postTitle}}</li>
+</ul>
