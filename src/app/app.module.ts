@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +7,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PostComponent } from './post/post.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { FormsModule } from '@angular/forms';
+
+import locales from '@angular/common/locales/es';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(locales, 'es');
 
 @NgModule({
   declarations: [
@@ -20,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule // <-- import the FormsModule before binding with [(ngModel)]
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
