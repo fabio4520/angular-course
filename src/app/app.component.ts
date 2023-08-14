@@ -13,6 +13,7 @@ export class AppComponent implements AfterViewInit {
   fromChildOutput: string;
   imgUrl: string = "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSm50w7rt_NzsWgLVMYU2cE1fVryZw0tOWKc1kZxjOAntfDWPmZZAiAmTvL6J_TkWbwa1uZ43utnZkXsRI"
   boolClass: boolean = true;
+  username: string;
 
   @ViewChild(PostComponent) postComponent: PostComponent;
 
