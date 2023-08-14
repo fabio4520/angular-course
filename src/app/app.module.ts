@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import locales from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
 import { AppendPipe } from './Pipes/append.pipe';
+import { SummaryPipe } from './Pipes/summary.pipe';
 registerLocaleData(locales, 'es');
 
 @NgModule({
@@ -19,7 +20,8 @@ registerLocaleData(locales, 'es');
     NavbarComponent,
     PostComponent,
     PostListComponent,
-    AppendPipe
+    AppendPipe,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,

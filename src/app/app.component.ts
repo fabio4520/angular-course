@@ -19,5 +19,7 @@ export class AppComponent {
     country: 'Spain'
   }
 
+  dummyText: string = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet blanditiis dicta perferendis beatae, eveniet sequi consectetur commodi suscipit eligendi hic minus odit facilis molestiae in sapiente consequuntur aspernatur, ipsam dolor!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet blanditiis dicta perferendis beatae, eveniet sequi  consectetur commodi suscipit eligendi hic minus odit facilis molestiae in sapiente consequuntur aspernatur, ipsam dolor!"
+
   constructor() { }
 }
