@@ -1,4 +1,4 @@
-<h1 [class.text-red]="boolClass">Angular App</h1>
+<!-- <h1 [class.text-red]="boolClass">Angular App</h1>
 <h2 [style.color]="boolClass ? 'blue': ''">Style binding</h2>
 
 <app-navbar></app-navbar>
@@ -7,14 +7,29 @@
 
 <p>{{message}}</p>
 
-<p>{{fromChildOutput}}</p>
+<p>{{fromChildOutput}}</p> -->
 
 <!-- <img [src]="imgUrl" alt=""> -->
 
-<button (click)="buttonClick()">Click me</button>
+<!-- <button (click)="buttonClick()">Click me</button> -->
 
 <!-- <input type="text" (keyup.enter)="onKeyup()"> -->
-<br>
+<!-- <br> -->
 <!-- <input type="text" (keyup.enter)="onKeyup2(username.value)" #username> -->
 
-<input type="text" [(ngModel)]="username">
+<!-- <input type="text" [(ngModel)]="username"> -->
+
+<!-- <p *ngFor="let post of postArray">{{post}}</p> -->
+
+<input type="text" (keyup.enter)="addData($event)">
+
+<ul>
+  <li *ngFor="let post of objArray; let i = index">
+    {{i}} - {{post.title}}
+    <button (click)="deleteData(i)">Delete</button>
+  </li>
+</ul>
+
+<div *ngIf="objArray.length==0">
+  <p>There is no Data to fetch</p>
+</div>
