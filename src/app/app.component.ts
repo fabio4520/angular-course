@@ -12,6 +12,7 @@ export class AppComponent {
   dcValue: number = 36.654789;
   price: number = 99.99;
   today: Date = new Date();
+  simpleArray = ['a', 'b', 'c', 'd', 'e'];
 
   constructor() { }
 }
