@@ -21,15 +21,34 @@
 
 <!-- <p *ngFor="let post of postArray">{{post}}</p> -->
 
-<input type="text" (keyup.enter)="addData($event)">
+<!-- <input type="text" (keyup.enter)="addData($event)">
 
-<ul>
-  <li *ngFor="let post of objArray; let i = index">
-    {{i}} - {{post.title}}
-    <button (click)="deleteData(i)">Delete</button>
-  </li>
-</ul>
+<div *ngIf="objArray.length > 0; then postList else noData"></div>
 
-<div *ngIf="objArray.length==0">
+<ng-template #postList>
+  <ul>
+    <li *ngFor="let post of objArray; let i = index">
+      {{i}} - {{post.title}}
+      <button (click)="deleteData(i)">Delete</button>
+    </li>
+  </ul>
+</ng-template>
+
+<ng-template #noData>
   <p>There is no Data to fetch</p>
-</div>
+</ng-template> -->
+
+
+<p>NgClass directive</p>
+
+<h1 [ngStyle]="{
+  color: isActiveStyle ? 'blue' : 'red',
+  textTransform: isActiveStyle ? 'uppercase' : 'lowercase'
+}">
+  Angular Udemy Course
+</h1>
+
+<h1 [ngClass]="{
+  'main': isActiveStyle,
+  'text-red': isActiveStyle
+ }">ngClass Directive</h1>

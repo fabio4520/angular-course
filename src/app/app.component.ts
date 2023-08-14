@@ -20,6 +20,8 @@ export class AppComponent implements AfterViewInit {
     { id: 2, title: "post2", content: "content2" },
     { id: 3, title: "post3", content: "content3" }
   ]
+  // noData: boolean = false;
+  isActiveStyle: boolean = true;
 
   @ViewChild(PostComponent) postComponent: PostComponent;
 
