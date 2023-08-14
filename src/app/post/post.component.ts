@@ -32,4 +32,12 @@ export class PostComponent implements OnInit {
   sendMessage() {
     this.messageEvent.emit(this.outputChildMessage);
   }
+
+  addNewData() {
+    let newPost = {
+      id: 7,
+      postTitle: 'Post 7',
+    };
+    this.PostService.addNewPost(newPost);
+  }
 }
