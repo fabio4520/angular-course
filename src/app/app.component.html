@@ -12,3 +12,7 @@
 <!-- <img [src]="imgUrl" alt=""> -->
 
 <button (click)="buttonClick()">Click me</button>
+
+<input type="text" (keyup.enter)="onKeyup()">
+<br>
+<input type="text" (keyup.enter)="onKeyup2(username.value)" #username>

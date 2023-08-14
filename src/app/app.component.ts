@@ -32,4 +32,12 @@ export class AppComponent implements AfterViewInit {
   buttonClick() {
     this.boolClass = !this.boolClass;
   }
+
+  onKeyup() {
+    console.log("Enter key pressed");
+  }
+
+  onKeyup2(username: string) {
+    console.log(username);
+  }
 }
