@@ -8,6 +8,8 @@ import { PostComponent } from './post/post.component';
 })
 export class AppComponent {
   title: string = 'Angular Course';
+  count: number = 28598746;
+  dcValue: number = 36.654789;
 
   constructor() { }
 }
