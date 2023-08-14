@@ -5,8 +5,21 @@
         <label for="">First Name</label>
         <input type="text" placeholder="First name" class="form-control"
           [ngClass]="{'is-invalid': firstName.invalid && firstName.touched}" name="firstName" ngModel
-          #firstName="ngModel" (change)="getValue(firstName)" required>
-        <div class="alert alert-danger" *ngIf="firstName.invalid && firstName.touched">First name is required ...</div>
+          #firstName="ngModel" (change)="getValue(firstName)" required minlength="5" maxlength="10">
+        <div class="" *ngIf="firstName.errors?.['required']">
+          <div class="alert alert-danger" *ngIf="firstName.invalid && firstName.touched">First name is required ...
+          </div>
+        </div>
+        <div class="" *ngIf="firstName.errors?.['minlength']">
+          <div class="alert alert-danger" *ngIf="firstName.invalid && firstName.touched">First name must be at least 5
+            characters long ...
+          </div>
+        </div>
+        <div class="" *ngIf="firstName.errors?.['maxlength']">
+          <div class="alert alert-danger" *ngIf="firstName.invalid && firstName.touched">First name must be at most 10
+            characters long ...
+          </div>
+        </div>
       </div>
       <div class="form-group">
         <label for="">Email</label>
